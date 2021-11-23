@@ -2,7 +2,7 @@
 
     <head>
 
-        <title>Profile | Log in</title>
+        <title>Profile | Sign up</title>
 
     </head>
 
@@ -65,15 +65,27 @@
 
         <div id="bar">
             <div style="font-size: 40px;">Profile</div> 
-            <div id="signup_button">Sign up</div>
+            <div id="signup_button">Log in</div>
         </div>
 
         <div id="login_bar">
-            Log in to my profile<br><br>
+            Sign up to my profile<br><br>
 
+            <input type="text" id="text" placeholder="First name"><br><br>
+            <input type="text" id="text" placeholder="Last name"><br><br>
+            <span style="font-weight: normal">Gender: </span><br> 
+            <select id="text">
+                <option> </option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>It's a secret:)</option>
+            </select>
+            <br><br>
             <input type="text" id="text" placeholder="Email"><br><br>
+
             <input type="password" id="text" placeholder="Password"><br><br>
-            <input type="submit" id="button" value="Log in">
+            <input type="password" id="text" placeholder="Retype Password"><br><br>
+            <input type="submit" id="button" value="Sign up"><br><br>
         </div>
 
     </body>
