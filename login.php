@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
+<html>
     <head>
 
-        <title>Profile | Log in</title>
+        <title>ME | Log in</title>
 
     </head>
 
@@ -12,7 +12,7 @@
             height:100px; 
             background-color: rgb(59,89,152); 
             color: #d9dfeb;
-            padding: 4px; 
+            padding: 4px;
         }
 
         #signup_button
@@ -22,7 +22,8 @@
             text-align: center;
             padding: 4px;
             border-radius: 4px;
-            float: right;
+            float: left;
+            margin: auto;
         }
 
         #login_bar
@@ -64,12 +65,13 @@
     <body style="font-family: tahoma; background-color: #e9ebee;">
 
         <div id="bar">
-            <div style="font-size: 40px;">Profile</div> 
+            <div style="font-size: 40px;padding-top:8px;">ME  </div> 
             <div id="signup_button">Sign up</div>
+            
         </div>
 
         <div id="login_bar">
-            Log in to my profile<br><br>
+            Log in to ME<br><br>
 
             <input type="text" id="text" placeholder="Email"><br><br>
             <input type="password" id="text" placeholder="Password"><br><br>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
+<html>
     <head>
 
-        <title>Profile | Sign up</title>
+        <title>ME | Sign up</title>
 
     </head>
 
@@ -64,12 +64,12 @@
     <body style="font-family: tahoma; background-color: #e9ebee;">
 
         <div id="bar">
-            <div style="font-size: 40px;">Profile</div> 
+            <div style="font-size: 40px;">ME</div> 
             <div id="signup_button">Log in</div>
         </div>
 
         <div id="login_bar">
-            Sign up to my profile<br><br>
+            Sign up to ME<br><br>
 
             <input type="text" id="text" placeholder="First name"><br><br>
             <input type="text" id="text" placeholder="Last name"><br><br>
