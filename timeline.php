@@ -29,7 +29,6 @@
         #profile_pic
         {
             width: 150px;
-            margin-top: -200px;
             border-radius: 50%;
             border: solid 2px white;
 
@@ -52,12 +51,12 @@
 
         #friends_bar
         {
-            background-color: white;
             min-height: 400px;
             margin-top: 20px;
-            color: #aaa;
+            color: #405d9b;
             padding: 8px;
-
+            text-align: center;
+            font-size: 20px;
         }
 
         #friends
@@ -111,55 +110,19 @@
         <div id="blue_bar">
             <div style="width: 800px; margin: auto; font-size: 30px;">
                  <div style="display:inline-block; width:50px;margin:auto;">ME</div> &nbsp &nbsp <input type="text" id="search_box" placeholder="Search for people">
-                <img src="ai2.jpg" style="width: 60px; height: 50px; float: right;">
+                <img src="AI.jpg" style="width: 60px; height: 50px; float: right;">
             </div>
         </div>
         <!--cover area-->
         <div style="width: 800px; margin:auto;min-height: 400px;">
-            <div style="background-color: white; text-align: center; color: #405d9b">
-
-                <img src="ai3.jpg" style="width:100%;">
-                <img id="profile_pic" src="ai2.jpg">
-
-                <br>
-
-                <div id="menu_button">Timeline</div>  
-                <div id="menu_button">About</div>   
-                <div id="menu_button">Friends</div>   
-                <div id="menu_button">Photos</div>   
-                <div id="menu_button">Settings</div>
-
-            </div>
+            
             <!--below cover area-->
             <div style="display: flex;">
                 <!--friends area-->
                 <div style="min-height: 400px; flex:1;">
                     <div id="friends_bar">
-                        Friends<br>
-
-                        <div id="friends">
-                            <img id="friends_img" src="user1.jpg">
-                            <br>
-                            1st user
-                        </div>
-
-                        <div id="friends">
-                            <img id="friends_img" src="user2.jpg">
-                            <br>
-                            2nd user
-                        </div>
-
-                        <div id="friends">
-                            <img id="friends_img" src="user3.jpg">
-                            <br>
-                            3rd user
-                        </div>
-
-                        <div id="friends">
-                            <img id="friends_img" src="user4.jpg">
-                            <br>
-                            4th user
-                        </div>
+                        <img src="ai2.jpg" id="profile_pic"><br>
+                        User ai
                     </div>
 
                     

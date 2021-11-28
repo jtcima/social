@@ -1,4 +1,38 @@
-<!DOCTYPE html>
+<?php
+
+    include("classes/connect.php");
+    include("classes/signupcheck.php");
+
+    $first_name = "";
+    $last_name = "";
+    $gender = "";
+    $email = "";
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        $signup = new Signup();
+        $result = $signup->evaluate($_POST);
+        if($result)
+        {
+            echo "<div style='text-align: center; font-size: 12px; color:red;'>";
+            echo $result;
+            echo "</div>";
+        }
+        else
+        {
+            header("Location: login.php");
+            die;
+        }
+
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $gender = $_POST['gender'];
+        $email = $_POST['email'];
+    }
+
+    
+?>
+
 <html>
     <head>
 
@@ -70,22 +104,25 @@
 
         <div id="login_bar">
             Sign up to ME<br><br>
+            <form method="post" action="">
 
-            <input type="text" id="text" placeholder="First name"><br><br>
-            <input type="text" id="text" placeholder="Last name"><br><br>
-            <span style="font-weight: normal">Gender: </span><br> 
-            <select id="text">
-                <option> </option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>It's a secret:)</option>
-            </select>
-            <br><br>
-            <input type="text" id="text" placeholder="Email"><br><br>
+                <input value="<?php echo $first_name?>" name="first_name" type="text" id="text" placeholder="First name"><br><br>
+                <input value="<?php echo $last_name?>" name="last_name" type="text" id="text" placeholder="Last name"><br><br>
+                <span style="font-weight: normal">Gender: </span><br> 
+                <select id="text" name="gender">
+                    <option><?php echo $gender?></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>It's a secret:)</option>
+                </select>
+                <br><br>
+                <input value="<?php echo $email?>" name="email" type="text" id="text" placeholder="Email"><br><br>
 
-            <input type="password" id="text" placeholder="Password"><br><br>
-            <input type="password" id="text" placeholder="Retype Password"><br><br>
-            <input type="submit" id="button" value="Sign up"><br><br>
+                <input name="password" type="password" id="text" placeholder="Password"><br><br>
+                <input name="password2" type="password" id="text" placeholder="Retype Password"><br><br>
+                <input type="submit" id="button" value="Sign up"><br><br>
+
+            </form>
         </div>
 
     </body>

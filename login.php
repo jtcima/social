@@ -1,4 +1,34 @@
-<!DOCTYPE html>
+<?php
+
+session_start();
+
+    include("classes/connect.php");
+    include("classes/logincheck.php");
+
+    $email = "";
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        $login = new Login();
+        $result = $login->check($_POST);
+        if($result)
+        {
+            echo "<div style='text-align: center; font-size: 12px; color:red;'>";
+            echo $result;
+            echo "</div>";
+        }
+        else
+        {
+            header("Location: profile.php");
+            die;
+        }
+
+        $email = $_POST['email'];
+        
+    }
+
+    
+?>
 <html>
     <head>
 
@@ -71,11 +101,14 @@
         </div>
 
         <div id="login_bar">
-            Log in to ME<br><br>
 
-            <input type="text" id="text" placeholder="Email"><br><br>
-            <input type="password" id="text" placeholder="Password"><br><br>
-            <input type="submit" id="button" value="Log in">
+            <form method="post"> 
+                Log in to ME<br><br>
+
+                <input value="<?php echo $email?>" name="email" type="text" id="text" placeholder="Email"><br><br>
+                <input name="password" type="password" id="text" placeholder="Password"><br><br>
+                <input type="submit" id="button" value="Log in">
+            </form>
         </div>
 
     </body>
