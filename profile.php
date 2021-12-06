@@ -1,3 +1,35 @@
+<?php
+
+    session_start();
+
+    include("classes/connect.php");
+    include("classes/logincheck.php");
+
+    //check if user is logged in
+    if(isset($_SESSION['me_userid']) && is_numeric($_SESSION['me_userid']))
+    {
+        $id = $_SESSION['me_userid'];
+        $login = new Login();
+        $result = $login->check_login($id);
+
+        if($result)
+        {
+            //retrive user data
+        }
+        else
+        {
+            header("Location: login.php");
+            die;
+        }
+    }
+    else
+    {
+        header("Location: login.php");
+        die;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,7 +61,7 @@
         #profile_pic
         {
             width: 150px;
-            margin-top: -200px;
+            margin-top: -60px;
             border-radius: 50%;
             border: solid 2px white;
 
