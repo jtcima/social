@@ -121,13 +121,7 @@
 
     <body style="font-family: tahoma; background-color: #d8d8e4;">
         <br>
-        <!--top bar-->
-        <div id="blue_bar">
-            <div style="width: 800px; margin: auto; font-size: 30px;">
-                 <div style="display:inline-block; width:50px;margin:auto;">ME</div> &nbsp &nbsp <input type="text" id="search_box" placeholder="Search for people">
-                <img src="ai2.jpg" style="width: 60px; height: 50px; float: right;">
-            </div>
-        </div>
+        <?php include("header.php"); ?>
         <!--cover area-->
         <div style="width: 800px; margin:auto;min-height: 400px;">
             
@@ -137,7 +131,7 @@
                 <div style="min-height: 400px; flex:1;">
                     <div id="friends_bar">
                         <img src="ai2.jpg" id="profile_pic"><br>
-                        User ai
+                        <a href="profile.php" style="text-decoration: none;"><?php echo $user_data['first_name']." ".$user_data['last_name']; ?></a>
                     </div>
 
                     

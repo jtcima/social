@@ -137,21 +137,22 @@
 
     <body style="font-family: tahoma; background-color: #d8d8e4;">
         <br>
-        <!--top bar-->
-        <div id="blue_bar">
-            <div style="width: 800px; margin: auto; font-size: 30px;">
-                 <div style="display:inline-block; width:50px;margin:auto;">ME</div> &nbsp &nbsp <input type="text" id="search_box" placeholder="Search for people">
-                 <a href="logout.php"> <span style="font-size: 11px; float: right; margin: 10px; border-radius:2px; color:#d9dfeb;padding:2px;">Logout</span> </a>
-                 <img src="ai2.jpg" style="width: 60px; height: 50px; float: right;">
-                
-            </div>
-        </div>
+        <?php include("header.php"); ?>
         <!--cover area-->
         <div style="width: 800px; margin:auto;min-height: 400px;">
             <div style="background-color: white; text-align: center; color: #405d9b">
 
                 <img src="ai3.jpg" style="width:100%;">
-                <img id="profile_pic" src="ai2.jpg">
+                <?php
+                    $image = "";
+                    if(file_exists($user_data['profile_image']))
+                    {
+                        $image = $user_data['profile_image'];
+                    }
+                ?>
+                
+                <a href="change_profile_image.php"><img id="profile_pic" src="<?php echo $image; ?>"></a>
+                
 
                 <br>
                     <div style="font-size: 20px; color: black;"> <?php echo $user_data['first_name']." ".$user_data['last_name'] ?> </div>
